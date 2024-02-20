@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from "./firebase";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
-
 
 function Home() {
   const [userEmail, setUserEmail] = useState('');
@@ -30,11 +28,25 @@ function Home() {
       alert(error.message);
     }
   };
+
   return (
-    <div>
-      <h1>Welcome to the user authentication react web application, </h1>
-      <h1>hello Mr.  {userEmail}!</h1>
-      <button onClick={handleLogout}>Logout</button>
+    <div style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      height: '100vh', 
+    }}>
+      <div style={{ 
+        backdropFilter: 'blur(4px)', 
+        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+        padding: '20px',
+        borderRadius: '10px',
+      }}>
+        <h1 style={{ fontWeight: 'bold' }}>Welcome to the user authentication web application using react,</h1>
+        <h1 style={{ fontWeight: 'bold' }}>Hello {userEmail}!</h1>
+        <button onClick={handleLogout} style={{ fontWeight: 'bold' }}>Logout</button>
+      </div>
     </div>
   );
 }

@@ -3,9 +3,9 @@ import React,{useState} from "react";
 import './Login.css';
 import { FaUserAlt,FaLock } from "react-icons/fa";
 import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebase";
-import { Link, useHistory, useNavigate } from 'react-router-dom';
-import { FirebaseError } from "firebase/app";
+
+import { Link,  useNavigate } from 'react-router-dom';
+
 
 
 
