@@ -32,7 +32,8 @@ function Home() {
   };
   return (
     <div>
-      <h1>Welcome, {userEmail}!</h1>
+      <h1>Welcome to the user authentication react web application, </h1>
+      <h1>hello Mr.  {userEmail}!</h1>
       <button onClick={handleLogout}>Logout</button>
     </div>
   );
