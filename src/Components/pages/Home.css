@@ -1,0 +1,8 @@
+/* Home.css */
+
+/* Set background image for the Home page */
+body[data-page="home"] {
+  /* Path to your home background image */
+  background-image: url('../Assets/homebackground.jpg');
+  /* Additional background styling */
+}
